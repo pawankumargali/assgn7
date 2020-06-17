@@ -31,15 +31,45 @@
                         PAGES
                         <i class="fa fa-caret-down"></i>
                     </a>
-                    <button class="info-wrapper">GET FREE QUOTE</button>
+                    <button class="info-wrapper" onclick="displayQuoteOverlay()">GET FREE QUOTE</button>
+
+                    <!-- Collapsible dropdown trigger -->
+                    <div id="collapsible-menu-btn">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </div>
+
+                    <!-- Pages dropdown -->
                     <div class="w-dropdown-list" id="dropdown-list">
                         <a class="dropdown-link">404 ERROR PAGE</a>
                         <a class="dropdown-link">PROTECTED PAGE</a>
                         <a class="dropdown-link">STYLE GUIDE</a>
                         <a class="dropdown-link">LICENSING</a>
+                        
                     </div>
+                
                 </div>
             </nav>
+             <!-- Collapsible dropdown -->
+             <div id="collapsible-dropdown">
+                <a class="dropdown-link active">HOME</a>
+                <a class="dropdown-link">PROJECTS</a>
+                <a class="dropdown-link">ABOUT</a>
+                <a class="dropdown-link">SERVICES</a>
+                <a class="dropdown-link">BLOG</a>
+                <a class="dropdown-link" id="pages-dropdown-trigger-collapsible">
+                    PAGES
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                 <!-- Pages dropdown -->
+                 <div id="pages-dropdown-list-collapsible">
+                    <div class="dropdown-link">404 ERROR PAGE</div>
+                    <div class="dropdown-link">PROTECTED PAGE</div>
+                    <div class="dropdown-link">STYLE GUIDE</div>
+                    <div class="dropdown-link">LICENSING</div>   
+                </div>
+                <button class="info-wrapper" onclick="displayQuoteOverlay()">GET FREE QUOTE</button>
+            </div>
             <!-- Nav End -->
 
             <!-- Slogan Start -->
@@ -47,7 +77,7 @@
                 <div id="slogan-section">
                     <h1 class="top-title">YOU DREAM. WE CREATE</h1>
                     <p class="paragraph-white paragraph-white-bigger">We turn your ideas to reality, we don't stop until you're satisfied.</p>
-                    <button class="button" id="get-quote-btn">GET FREE QUOTE</button>
+                    <button class="button" onclick="displayQuoteOverlay()">GET FREE QUOTE</button>
                 </div>
                 <div class="social-vertical">
                     <a class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -87,13 +117,39 @@
         </section>
         <!-- Banner Section End -->
 
+        <!-- Overlay Section Start -->
+            <section id="quote-overlay">
+                <div id="quote-overlay-close-btn" onclick="hideQuoteOverlay()">
+                    <div id="overlay-btn-line-1"></div>
+                    <div id="overlay-btn-line-2"></div>
+                </div>
+                <h3 class="top-title">
+                    GET A FREE QUOTE
+                <span class="background-title">QUOTE</span>
+                </h3>
+                <p class="description">FULL NAME</p>
+                <input type="text"/>
+                <p class="description">EMAIL ADDRESS</p>
+                <input type="text"/>
+                <p class="description">PHONE NUMBER</p>
+                <input type="text"/>
+                <p class="description">MORE INFORMATION</p>
+                <textarea> </textarea>
+                <button class="button">SEND MESSAGE</button>
+            </section>
+        <!-- Overlay Section End -->
+
         <!-- Services Section Start -->
         <section id="services-section">
+
             <div id="services-heading">
-                <h3 class="top-title">OUR SPECIALIZATION</h3>
-                <h3 class="background-title">SERVICES</h3>
+                <h3 class="top-title">
+                    OUR SPECIALIZATION
+                    <span class="background-title">SERVICES</span>
+                </h3>
                 <p><a class="for-button">VIEW ALL SERVICES</a></p>
             </div>
+
             <div id="service-items">
 
                 <div class="service-item">
@@ -136,10 +192,14 @@
 
              <!-- About Section Start -->
             <div id="about-section">
-                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/serv-1.jpg">
                 <div>
-                    <h3 class="top-title">WHO WE ARE</h3>
-                    <h3 class="background-title">ABOUT</h3>
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/serv-1.jpg" alt="construction-work img">
+                </div>
+                <div>
+                    <h3 class="top-title">WHO WE ARE
+                        <span class="background-title">ABOUT</span>
+                    </h3>
+                    
                     <p>
                         Based on collective work and shared knowledge, Nuuk aims to favor dialogue and debate, 
                         to transform individual knowledge into increased creative potential.<br/><br/>Our studio is a 
@@ -186,12 +246,15 @@
             <!-- Projects section start -->
             <section id="projects-section">
                 <div id="projects-heading">
-                    <h3 class="top-title">OUR WORK</h3>
-                    <h3 class="background-title" >PROJECTS</h3>
+                    <h3 class="top-title">
+                        OUR WORK
+                        <span class="background-title" >PROJECTS</span>
+                    </h3>
+                    
                     <p><a class="for-button">VIEW ALL WORKS</a></p>
                 </div>
                 <div id="project-items">
-                    <div>
+                    <div>   
                             <img class="project-item-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-1.jpg" alt="project-img-icon" />
                             <div class="project-overlay">
                                 <div class="project-circle">
@@ -249,7 +312,7 @@
                 <div class="section">
                     <h1 class="top-title">LET'S MAKE SOMETHING GREAT TOGETHER</h1>
                     <p class="paragraph-white paragraph-white-bigger">Get in touch with us and send some basic info for a quick quote.</p>
-                    <p><a class="for-button">GET FREE QUOTE</a></p>
+                    <p><a class="for-button" onclick="displayQuoteOverlay()">GET FREE QUOTE</a></p>
                 </div>
 
             </section>
@@ -258,8 +321,9 @@
             <!-- Professionals section start -->
             <section id="professionals-section">
                 <div id="professionals-heading">
-                    <h3 class="top-title">PROFESSIONALS</h3>
-                    <h3 class="background-title">TEAM</h3>
+                    <h3 class="top-title">PROFESSIONALS
+                        <span class="background-title">TEAM</span>
+                    </h3>
                     <p><a class="for-button">ABOUT US</a></p>
                 </div>
                 
@@ -281,7 +345,7 @@
                     <div class="professional-item">
                         <img class="team-photo" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-2.jpg" alt="team-member-icon" />
                         <div class="team-content">
-                            <h3 class="service-title">PHILIP BROWER</h3>
+                            <h3 class="service-title">JOHN WICK</h3>
                             <p class="job-title">Managing Director</p>
                         </div>
                         <div class="social-vertical">
@@ -294,7 +358,7 @@
                     <div class="professional-item">
                         <img class="team-photo" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-3.jpg" alt="team-member-icon" />
                         <div class="team-content">
-                            <h3 class="service-title">PHILIP BROWER</h3>
+                            <h3 class="service-title">JIMMY MCGILL</h3>
                             <p class="job-title">Managing Director</p>
                         </div>
                         <div class="social-vertical">
@@ -307,7 +371,7 @@
                     <div class="professional-item">
                         <img class="team-photo" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/team-4.jpg" alt="team-member-icon" />
                         <div class="team-content">
-                            <h3 class="service-title">PHILIP BROWER</h3>
+                            <h3 class="service-title">SARA CONNOR</h3>
                             <p class="job-title">Managing Director</p>
                         </div>
                         <div class="social-vertical">
@@ -323,8 +387,10 @@
             <div class="testimonials-wrapper">
 
                 <div id="testimonials-section-heading">
-                    <h3 class="top-title">TESTIMONIALS</h3>
-                    <h3 class="background-title">CLIENTS</h3>
+                    <h3 class="top-title">
+                        TESTIMONIALS
+                        <span class="background-title">CLIENTS</span>
+                    </h3>
                     <p class="testimonial-paragraph">Aenean ut eros et nisl sagittis vestibulum. Fusce neque. 
                         Praesent blandit laoreet nibh. Morbi mollis tellus ac sapien.
                     </p>
@@ -391,8 +457,10 @@
         <!-- Blog section start -->
         <section id="blog-section">
             <div id="blog-section-heading">
-                <h3 class="top-title">LATEST NEWS</h3>
-                <h3 class="background-title">BLOG</h3>
+                <h3 class="top-title">
+                    LATEST NEWS
+                    <span class="background-title">BLOG</span>
+                </h3>
                 <p><a class="for-button">VIEW BLOG</a></p>
             </div>
 
@@ -454,11 +522,13 @@
         <!-- Logo section start -->
         <section class="logo-section">
             <div class="logo-section-caption">TRUSTED BY TOP COMPANIES</div>
-            <div class="logo-section-item">LOGO 1</div>
-            <div class="logo-section-item">LOGO 2</div>
-            <div class="logo-section-item">LOGO 3</div>
-            <div class="logo-section-item">LOGO 4</div>
-            <div class="logo-section-item">LOGO 5</div>
+            <!-- <div id="logo-section-items"> -->
+                <div class="logo-section-item">LOGO 1</div>
+                <div class="logo-section-item">LOGO 2</div>
+                <div class="logo-section-item">LOGO 3</div>
+                <div class="logo-section-item">LOGO 4</div>
+                <div class="logo-section-item">LOGO 5</div>
+            <!-- </div> -->
         </section>
         <!-- Logo section end -->
 
@@ -495,6 +565,14 @@
                         </div>
                         <div class="paragraph-white">1-800-506-266</div>
                     </div> 
+
+                    <div>
+                        <div class="contact-item-title">
+                            <img class="info-image" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg" alt="clock-icon"/>
+                            <h3 class="phone-text">OPENING TIMES</h3>
+                        </div>
+                        <div class="paragraph-white">Mon - Sat 8:00 - 17:30, Sunday - Closed</div>
+                    </div> 
     
                     <div>
                         <div class="contact-item-title">
@@ -504,13 +582,6 @@
                         <div class="paragraph-white">contact@nuuk.com</div>
                     </div> 
                     
-                    <div>
-                        <div class="contact-item-title">
-                            <img class="info-image" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg" alt="clock-icon"/>
-                            <h3 class="phone-text">OPENING TIMES</h3>
-                        </div>
-                        <div class="paragraph-white">Mon - Sat 8:00 - 17:30, Sunday - Closed</div>
-                    </div> 
                 </div>
 
             </div>
